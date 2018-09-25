@@ -1,4 +1,4 @@
-class Trees
+module Trees
 
   def tree_level(parent = nil, display_mode = :full)
     parent_id = parent ? parent.id : nil
