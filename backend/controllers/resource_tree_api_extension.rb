@@ -1,7 +1,4 @@
-require_relative 'tree_docs'
-
 class ArchivesSpaceService < Sinatra::Base
-
 
   Endpoint.get('/repositories/:repo_id/resources/:id/children')
     .description("Get the children of an Archival Object")
@@ -46,6 +43,5 @@ class ArchivesSpaceService < Sinatra::Base
     tree = resource.tree_level(parent, display_mode)
     json_response(tree)
   end
-
 
 end
