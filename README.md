@@ -1,6 +1,6 @@
 ## ArchivesSpace resource tree API extension plugin
 
-A plugin for ArchivesSpace that adds API enpoints to enable retrieval of specified branches of a resource tree.
+A plugin for ArchivesSpace that adds API enpoints to enable retrieval of specified levels of a resource tree.
 
 ## Installation
 
@@ -21,7 +21,7 @@ Get the archival object children of an Resource
 
 ####Parameters
 
-Both parameters are required an, Repository and Resource must exist.
+Both parameters are required, and Repository and Resource must exist.
 
 * id (integer) – The ID of the resource
 * repo_id (integer) – The Repository ID
@@ -30,3 +30,23 @@ Both parameters are required an, Repository and Resource must exist.
 
 * 200 – a list of archival object references
 * 404 – Not found
+
+
+###[:GET] /repositories/:repo_id/resources/:id/tree_level
+
+Get the archival object children of a specified parent within a resource. Retuns children of root if no parent_uri is supplied
+
+####Parameters
+
+`id` and `resource_id` are required and Repository and Resource must exist.
+
+* id (integer) – The ID of the resource
+* repo_id (integer) – The Repository ID
+* parent_uri (string) - URI of the parent record (defaults to root if not provided)
+* display_mode (string) - 'sparse' or 'full' (default)
+
+####Returns
+
+* 200 – a list of archival object references
+* 404 – Not found
+
