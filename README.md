@@ -1,6 +1,6 @@
-## ArchivesSpace resource tree API extension plugin
+## ArchivesSpace remote browse API extension plugin
 
-A plugin for ArchivesSpace that adds API enpoints to enable retrieval of specified levels of a resource tree.
+A plugin for ArchivesSpace that adds API enpoints to enable discovery and browse of resource contents from a remote host application.
 
 ## Installation
 
